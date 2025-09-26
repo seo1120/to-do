@@ -8,7 +8,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 font-sans min-h-screen">
+<body class="bg-pink-50 font-sans min-h-screen">
 
     <!-- 전체 컨테이너 -->
     <div class="max-w-2xl mx-auto p-6">
@@ -42,13 +42,15 @@
             <h2 class="text-xl font-semibold text-gray-800 mb-4">🩵 할 일 목록</h2>
 
             <!-- Todo 항목들이 여기에 추가됩니다 -->
-            <div id="todoList" class="space-y-2">
-                <!-- 예시 Todo 항목 (JavaScript로 동적 생성할 예정) -->
+            <div id="todoList" class="space-y-3">
+                <!-- 개별 할 일 항목 예시 -->
+                <!--
                 <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                    <input type="checkbox" class="w-5 h-5 text-blue-600">
-                    <span class="flex-1 text-gray-700">예시: JavaScript 공부하기</span>
+                    <input type="checkbox" class="w-5 h-5 text-pink-300">
+                    <span class="flex-1 text-gray-700">예시 할 일</span>
                     <button class="text-red-500 hover:text-red-700 px-2 py-1 rounded">삭제</button>
                 </div>
+                -->
             </div>
 
             <!-- 목록이 비어있을 때 메시지 -->
@@ -75,19 +77,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- 개발 팁 -->
-        <div class="bg-pink-50 border border-pink-200 rounded-lg p-6 mt-6">
-            <h3 class="text-lg font-semibold text-green-800 mb-3">💡 개발 팁</h3>
-            <div class="space-y-2 text-sm text-green-700">
-                <p>• <strong>DOM 조작:</strong> document.getElementById(), querySelector() 활용</p>
-                <p>• <strong>이벤트:</strong> onclick, addEventListener 사용</p>
-                <p>• <strong>저장소:</strong> localStorage.setItem(), getItem() 활용</p>
-                <p>• <strong>배열:</strong> push(), splice(), filter() 메서드 활용</p>
-                <p>• <strong>디버깅:</strong> console.log()로 값 확인하기</p>
-            </div>
-        </div>
-
     </div>
 
     <!-- JavaScript 영역 -->
@@ -100,8 +89,6 @@
             // 💡 여기에 LocalStorage에서 데이터 불러오는 코드 작성
             const savedTodos = localStorage.getItem('todos');
             console.log('Todo 앱이 시작되었습니다!');
-            console.log('💡 과제: LocalStorage에서 저장된 할일들을 불러와 화면에 표시하세요');
-
             // 예시 데이터 (실제로는 LocalStorage에서 불러와야 함)
             loadTodos();
             renderTodos();
